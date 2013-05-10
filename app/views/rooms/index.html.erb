@@ -1,0 +1,38 @@
+<h1>ZooChat</h1>
+<ul class="menu">
+  <li><i class="icon-time"></i><%= link_to t('.participants'), participants_path %></li>
+  <li><i class="icon-user"></i><%= link_to t('.users'), users_path %></li>
+</ul>
+
+<table class="rooms">
+  <thead>
+    <th><%= t('activerecord.attributes.room.name') %></th>
+    <th><%= t('activerecord.attributes.room.last_arrived_at') %></th>
+    <th><%= t('activerecord.attributes.room.last_left_at') %></th>
+    <th><%= t('activerecord.attributes.room.members_count') %></th>
+  </thead>
+  <tbody>
+    <% @rooms.each do|room| %>
+      <tr>
+        <td><%= link_to room.name, room_path(room) %></td>
+        <td class="center">
+          <% if room.last_arrived_at %>
+            <%= room.last_arrived_at.strftime(t('date.long')) %>
+          <% else %>
+            <%= t('.no_last_arrived_at') %>
+          <% end %>
+        </td>
+        <td class="center">
+          <% if room.last_left_at %>
+            <%= room.last_left_at.strftime(t('date.long')) %>
+          <% else %>
+            <%= t('.no_last_left_at') %>
+          <% end %>
+        </td>
+        <td class="center">
+          <%= room.members_count %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

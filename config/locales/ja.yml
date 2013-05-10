@@ -1,0 +1,24 @@
+ja:
+  date:
+    long: "%m月%d日 %H時%M分"
+    short: "%m月%d日"
+  time:
+    long: "%H:%M:%s"
+    short: "%H:%M"
+  chat:
+    styles:
+      -
+        - '特大'
+        - 'x-large'
+      -
+        - '大きい'
+        - 'large'
+      -
+        - '普通'
+        - 'normal'
+      -
+        - '小さい'
+        - 'small'
+      -
+        - '微小'
+        - 'x-small'

@@ -1,0 +1,48 @@
+ja:
+  chats:
+    index:
+      move: '移動'
+      call: '語りかけ'
+      leave: '退室'
+      fortune_slip: 'おみくじを引く'
+      send: '発言'
+      content_placeholder: '発言内容'
+      call_content_placeholder: '語りかけ内容'
+    status:
+      member:
+        h1: '参加者:'
+      rom:
+        h1: 'Rom中:'
+        count: '人'
+    chat:
+      message:
+        content_html: '「<span style="color:%{color};">%{content}</span>」'
+      arrived:
+        linked_room:
+          content_html: 'さんが<a href="/rooms/%{room_id}">%{room_name}</a>へ<span class="action">入室！</span>'
+        origin:
+          content_html: 'さんが<span class="action">入室！</span>'
+        other:
+          content_html: 'さんが%{room_name}へ<span class="action">入室！</span>'
+      left:
+        linked_room:
+          content_html: 'さんが<a href="/rooms/%{room_id}">%{room_name}</a>から<span class="action">退室！</span>'
+        origin:
+          content_html: 'さんが<span class="action">退室！</span>'
+        other:
+          content_html: 'さんが%{room_name}から<span class="action">退室！</span>'
+      move:
+        origin:
+          content_html: 'さんが%{target_room_name}へ<span class="action">移動</span>しました'
+        target:
+          content_html: 'さんが%{room_name}から<span class="action">移動</span>してきました'
+        other:
+          content_html: 'さんが%{room_name}から%{target_room_name}へ<span class="action">移動</span>'
+      call:
+        origin:
+          content_html: '(%{room_name}へ)「<span style="color:%{color};">%{content}</span>」'
+        target:
+          content_html: '(%{room_name}から)「<span style="color:%{color};">%{content}</span>」'
+      fortune_slip:
+        name: 'おみくじ'
+        content_html: '「<span style="color:%{color};">%{name}</span>さんの運勢は、、、"%{content}"」'

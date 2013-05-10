@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %>ZooChat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= render 'shared/pusher' %>
+  <%= csrf_meta_tags %>
+</head>
+<body
+  class="<%= yield :body_class %>"
+  data-room_id="<%= yield :body_data_room_id %>"
+  data-user_id="<%= yield :body_data_user_id %>"
+>
+
+<%= yield %>
+
+</body>
+</html>

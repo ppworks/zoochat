@@ -1,0 +1,7 @@
+en:
+  users:
+    show:
+      edit: 'Edit profile'
+      chat_count: 'Message count'
+    form:
+      update: 'Update profile'

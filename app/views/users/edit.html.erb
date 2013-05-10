@@ -1,0 +1,6 @@
+<% content_for :title, "#{t('rooms.index.users')} " %>
+<% content_for :body_class, 'users' %>
+<h1>
+  <%= link_to t('rooms.index.users'), root_path %>
+</h1>
+<%= render 'form' %>
